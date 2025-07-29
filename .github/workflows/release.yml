@@ -31,7 +31,7 @@ jobs:
       - name: Create Windows archive
         run: |
           cd build/windows/x64/runner/Release
-          7z a -tzip ../../../../../../memory_game_windows.zip .
+          Compress-Archive -Path * -DestinationPath ../../../../../../memory_game_windows.zip
           
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v4
